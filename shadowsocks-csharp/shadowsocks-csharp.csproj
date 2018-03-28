@@ -187,6 +187,12 @@
     <Compile Include="View\CalculationControl.Designer.cs">
       <DependentUpon>CalculationControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\HotkeySettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\CalculationControl.resx">
       <DependentUpon>CalculationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\HotkeySettingsForm.resx">
       <DependentUpon>HotkeySettingsForm.cs</DependentUpon>
