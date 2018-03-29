@@ -52,6 +52,9 @@ namespace Shadowsocks.View
         private MenuItem autoCheckUpdatesToggleItem;
         private MenuItem checkPreReleaseToggleItem;
         private MenuItem proxyItem;
+        private MenuItem LoginItem;
+        private LoginForm loginForm;
+
         private MenuItem hotKeyItem;
         private MenuItem VerboseLoggingToggleItem;
         private ConfigForm configForm;
@@ -284,6 +287,8 @@ namespace Shadowsocks.View
                     this.editOnlinePACItem = CreateMenuItem("Edit Online PAC URL...", new EventHandler(this.UpdateOnlinePACURLItem_Click)),
                 }),
                 this.proxyItem = CreateMenuItem("Forward Proxy...", new EventHandler(this.proxyItem_Click)),
+                this.LoginItem = CreateMenuItem("Login", new EventHandler(this.loginItem_Click)),
+
                 new MenuItem("-"),
                 this.AutoStartupItem = CreateMenuItem("Start on Boot", new EventHandler(this.AutoStartupItem_Click)),
                 this.ShareOverLANItem = CreateMenuItem("Allow other Devices to connect", new EventHandler(this.ShareOverLANItem_Click)),
@@ -482,6 +487,20 @@ namespace Shadowsocks.View
                 proxyForm.Show();
                 proxyForm.Activate();
                 proxyForm.FormClosed += proxyForm_FormClosed;
+            }
+        }
+
+        private void ShowLoginForm()
+        {
+            if(loginForm != null)
+            {
+                loginForm.Activate();
+            }
+            else
+            {
+                loginForm = new LoginForm();
+                loginForm.Show();
+                loginForm.Activate();
             }
         }
 
@@ -878,6 +897,11 @@ namespace Shadowsocks.View
         private void proxyItem_Click(object sender, EventArgs e)
         {
             ShowProxyForm();
+        }
+
+        private void loginItem_Click(object sender, EventArgs e)
+        {
+            ShowLoginForm();
         }
 
         private void hotKeyItem_Click(object sender, EventArgs e)
