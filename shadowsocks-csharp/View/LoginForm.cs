@@ -7,17 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Shadowsocks.Controller;
+using Shadowsocks.Model;
+using Shadowsocks.Properties;
 
 namespace Shadowsocks.View
 {
     public partial class LoginForm : Form
     {
-        public LoginForm()
+        private ShadowsocksController controller;
+
+        public LoginForm(ShadowsocksController controller)
         {
             InitializeComponent();
+
+            this.controller = controller;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
         {
 
         }

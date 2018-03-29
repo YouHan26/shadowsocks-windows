@@ -126,5 +126,15 @@ namespace Shadowsocks.View
                 ProxyTypeComboBox.Enabled = false; 
             }
         }
+
+        private void ProxyForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProxyForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -498,7 +498,7 @@ namespace Shadowsocks.View
             }
             else
             {
-                loginForm = new LoginForm();
+                loginForm = new LoginForm(controller);
                 loginForm.Show();
                 loginForm.Activate();
             }
