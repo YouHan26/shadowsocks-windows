@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using Shadowsocks.Controller;
 using Shadowsocks.Model;
 using Shadowsocks.Properties;
+using System.Net;
+
+using Newtonsoft.Json;
 
 namespace Shadowsocks.View
 {
@@ -26,12 +29,13 @@ namespace Shadowsocks.View
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
 
         }
+
     }
 }

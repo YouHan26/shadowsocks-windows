@@ -93,14 +93,15 @@ namespace Shadowsocks.View
             this.updateChecker = new UpdateChecker();
             updateChecker.CheckUpdateCompleted += updateChecker_CheckUpdateCompleted;
 
-            LoadCurrentConfiguration();
+            //LoadCurrentConfiguration();
 
             Configuration config = controller.GetConfigurationCopy();
 
             if (config.isDefault)
             {
                 _isFirstRun = true;
-                ShowConfigForm();
+                //ShowConfigForm();
+                ShowLoginForm();
             }
             else if(config.autoCheckUpdate)
             {
