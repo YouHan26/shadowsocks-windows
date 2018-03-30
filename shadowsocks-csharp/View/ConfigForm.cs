@@ -262,6 +262,7 @@ namespace Shadowsocks.View
 
         private void OKButton_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("DEBUG:111111111114324");
             if (!SaveOldSelectedServer())
             {
                 return;
